@@ -1,0 +1,100 @@
+.about_section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    opacity: 0; /* Initially hide the section */
+}
+
+.img-box {
+    text-align: center; /* Center the image */
+}
+
+.img-box img {
+    max-width: 100%; /* Ensure the image doesn't overflow */
+}
+
+.detail-box {
+    padding: 20px;
+    
+}
+
+.detail-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold; /* Making the title bold */
+    text-decoration: none;
+}
+
+.detail-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.detail-box a {
+    display: block; /* Make the button a block element */
+    width: 180px;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: #61361e;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.detail-box a:hover {
+    background-color: white;
+    color:#61361e;
+    border-color: #61361e;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .about_section .row {
+        display: flex;
+        align-items: center; /* Align items vertically in the center */
+    }
+
+    .img-box {
+        width: 100%; /* Half width for the image box on medium and larger screens */
+    }
+
+    .detail-box {
+        width: 100%; /* Half width for the detail box on medium and larger screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .about_section .row {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Align items horizontally in the center */
+    }
+
+    .img-box {
+        width: 100%; /* Full width for the image box on small screens */
+        margin-bottom: 20px; /* Add some spacing between image and text */
+    }
+
+    .detail-box {
+        width: 100%; /* Full width for the detail box on small screens */
+    }
+}
+
+.carousel-item img {
+    max-height: 800px; /* Adjust height as needed */
+    margin: 0 auto; /* Center images horizontally */
+}
+
+.slide-from-left {
+    animation: slideFromLeft 1s ease forwards;
+    opacity: 1; /* Ensure the section is visible during animation */
+}
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

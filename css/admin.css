@@ -1,0 +1,199 @@
+/* Main container styles */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff; /* Bright and clean background */
+}
+
+/* IKEA-inspired color scheme */
+:root {
+    --ikea-blue: #0058a3;
+    --ikea-yellow: #ffcc00;
+    --neutral-gray: #f2f2f2;
+    --hover-gray: #eaeaea;
+}
+
+/* Table styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.table th, .table td {
+    text-align: left;
+    padding: 12px; /* Slightly larger padding for a cleaner look */
+    border-bottom: 2px solid var(--neutral-gray); /* Consistent with IKEA's clean lines */
+}
+
+.table th {
+    background-color: var(--ikea-blue);
+    color: white; /* Contrast text for readability */
+}
+
+.table tr:hover {
+    background-color: var(--hover-gray); /* Subtle hover effect */
+}
+
+/* Form styles */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid var(--neutral-gray); /* Slight border for definition */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Lighter shadow for subtlety */
+    margin-top: 20px;
+}
+
+input[type=text], input[type=number], input[type=file], textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding for comfort */
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid var(--neutral-gray); /* Soft border */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: var(--ikea-blue); /* IKEA blue for brand identity */
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for interactions */
+}
+
+input[type=submit]:hover {
+    background-color: var(--ikea-yellow); /* Highlight color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+}
+:root {
+    /* Color scheme */
+    --ikea-blue: #0058a3;
+    --ikea-yellow: #ffcc00;
+    --neutral-gray: #f2f2f2;
+    --hover-gray: #eaeaea;
+    --text-color: #333; /* Improved contrast */
+
+    /* Spacing */
+    --space-xs: 8px;
+    --space-sm: 12px;
+    --space-md: 20px;
+    --space-lg: 32px;
+
+    /* Font sizes */
+    --font-size-base: 1rem; /* 16px */
+    --font-size-sm: .875rem; /* 14px */
+    --font-size-lg: 1.25rem; /* 20px */
+
+    /* Borders */
+    --border-radius: 4px;
+}
+
+.table th, .table td {
+    padding: var(--space-sm);
+    border-bottom: 2px solid var(--neutral-gray);
+}
+
+.table th {
+    background-color: var(--ikea-blue);
+    color: white;
+}
+
+.table tr:hover {
+    background-color: var(--hover-gray);
+}
+
+input[type=submit]:hover, input[type=submit]:focus {
+    background-color: var(--ikea-yellow);
+    outline: none; /* Remove for accessibility if not replacing with a better focus indicator */
+}
+
+input[type=text], input[type=number], input[type=file], textarea, input[type=submit] {
+    padding: var(--space-sm);
+    margin: var(--space-xs) 0;
+    border-radius: var(--border-radius);
+}
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-base: .875rem; /* 14px */
+        --font-size-sm: .75rem; /* 12px */
+        --font-size-lg: 1rem; /* 16px */
+    }
+}
+
+@media print {
+    body {
+        color: #000;
+        background: #fff;
+    }
+    .navbar, .footer, form, .btn {
+        display: none; /* Hide elements not necessary for print */
+    }
+}
+/* Base button styles */
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: var(--font-size-sm);
+    color: white;
+    background-color: var(--ikea-blue);
+    border: none;
+    border-radius: var(--border-radius);
+    text-decoration: none; /* This removes the underline */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+/* Edit button specific styles */
+.btn-edit {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px; /* Adjust these values to change the size of the button */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Adjust this value to change the size of the text */
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn-edit:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+/* Delete button specific styles */
+.btn-delete {
+    background-color: #f44336; /* Red */
+    border: none;
+    color: white;
+    padding: 10px 20px; /* Adjust these values to change the size of the button */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Adjust this value to change the size of the text */
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #da190b;
+    color: white;
+}
